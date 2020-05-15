@@ -7,13 +7,15 @@ import { MiPrimerComponenteComponent } from './mi-primer-componente/mi-primer-co
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
 import { FormsModule } from "@angular/forms";
+import { ProyectoAngularComponent } from './proyecto-angular/proyecto-angular.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MiPrimerComponenteComponent,
     PadreComponent,
-    HijoComponent
+    HijoComponent,
+    ProyectoAngularComponent
   ],
   imports: [
     BrowserModule,
