@@ -1,14 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { PadreComponent } from './padre/padre.component';
+import { HijoComponent } from './hijo/hijo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PadreComponent,
+    HijoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
