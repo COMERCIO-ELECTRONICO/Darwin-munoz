@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
+import { DeberPgComponent } from './deber-pg/deber-pg.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PadreComponent,
-    HijoComponent
+    HijoComponent,
+    DeberPgComponent
   ],
   imports: [
     BrowserModule,
