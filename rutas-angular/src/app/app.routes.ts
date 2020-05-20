@@ -8,15 +8,20 @@ import { NoEncontradoComponent } from './inicio/no-encontrado/no-encontrado.comp
 const rutas: Routes = [
     {
         path: 'inicio',
-        component: HomeComponent
+        component: HomeComponent,
+    },
+    {
+        path: ':id/inicio',
+        component: HomeComponent,
     },
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
     },
     {
       path: 'usuario',
-      loadChildren: ()=>import('./usuario/usuario.module')
+      loadChildren: ()=>
+      import('./usuario/usuario.module')
       .then(m=>m.UsuarioModule)
 
     },
