@@ -1,4 +1,80 @@
 
 <h1>
-    cargar pokemon
+    CARGA TU POKEMON AQUI!
 </h1>
+<p>login works!</p>
+<div class="container">
+  <h1>
+    variables html #
+  </h1>
+  <form (ngSubmit)="obtenerFormulario(formularioUsario)" #formularioUsario="ngForm">
+ 
+    <div class="form-group">
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name" name="nombre" [(ngModel)]="nombre" #varnom="ngModel">
+        </div>
+        {{varnom}}
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" name="apellido"[(ngModel)]="apellido">
+        </div>
+      </div>
+   
+      <label for="exampleInputEmail1">Contraseña</label>
+      <input
+      type="password"
+      class="form-control"
+      [(ngModel)]="email"
+        minlength="10"
+        required
+        #campoEmail="ngModel">
+      
+      {{campoEmail.errors | json}}
+
+      <small id="emailHelp" class="form-text text-muted">obligatorio</small>
+    </div>
+  
+
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Confirmar contraseña</label>
+      <input
+      type="password"
+      class="form-control"
+      [(ngModel)]="contrasena"
+        name="contrasena"
+        placeholder="****"
+        minlength="10"
+        required
+        #campoContrasena="ngModel">
+    </div>
+    {{campoContrasena | json}}
+    <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="(campoEmail.errors)
+    && campoEmail.dirty === true">
+      <p
+      *ngIf="campoEmail.errors.required">
+        CAMPO  REQUERIDO
+      </p>
+      <p
+      *ngIf="campoEmail.errors.minlength">
+        MINIMO 10
+      </p>
+      <p *ngIf="campoEmail ! == campoContrasena"
+      >
+    no coinciden
+    </p>
+
+    </div>
+    <button
+    [disabled]="formularioUsario.invalid"
+    type="submit"
+    class="btn btn-primary">
+    Submit</button>
+  
+  </form>
+
+</div>

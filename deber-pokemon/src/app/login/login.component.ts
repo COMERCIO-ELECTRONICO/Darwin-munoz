@@ -8,8 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   constructor() { }
+  email = '';
+  contrasena = '';
+nombre='';
+apellido='';
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  obtenerFormulario(formulario) {
+    console.log(formulario);
+    alert(
+      'correo: ' +
+        formulario.controls.email.value +
+        'password: ' +
+        formulario.controls.contrasena.value +
+        'Nombre:' +
+         formulario.controls.nombre.value  +
+         'Apellido' +
+         formulario.control.apellido.value
+    );
   }
-
 }
