@@ -7,8 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { HomComponent } from './inicio/hom/hom.component';
 import { NoEncontradoComponent } from './inicio/no-encontrado/no-encontrado.component';
 import { PokemonModule } from './pokemon/pokemon.module';
-
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,8 @@ import { PokemonModule } from './pokemon/pokemon.module';
   imports: [
     BrowserModule,
     AppRoutesComponent,
-    PokemonModule
+    PokemonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
