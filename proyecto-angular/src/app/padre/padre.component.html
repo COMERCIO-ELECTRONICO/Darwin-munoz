@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>
+        componente padre
+    </h1>
+    <div class="row" >
+<a>Escriba el año que nacio</a>
+        <input type="text" class="form-control" [(ngModel)]="padre">
+        
+        {{padre}}
+    </div>
+   
+
+    
+<div class="row">
+    <h3>
+        Usted tiene la edad de 
+    </h3>
+</div>
+{{resul}}
+</div>
+    <div class="row">
+        <app-hijo 
+        [epoca]="padre"
+         >
+ </app-hijo>
+    
+</div>

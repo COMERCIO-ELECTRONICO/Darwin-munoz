@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-deberCarlosPg": {
+    "proyecto-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-deberCarlosPg",
+            "outputPath": "dist/proyecto-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-deberCarlosPg:build"
+            "browserTarget": "proyecto-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-deberCarlosPg:build:production"
+              "browserTarget": "proyecto-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-deberCarlosPg:build"
+            "browserTarget": "proyecto-angular:build"
           }
         },
         "test": {
@@ -114,19 +114,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-deberCarlosPg:serve"
+            "devServerTarget": "proyecto-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-deberCarlosPg:serve:production"
+              "devServerTarget": "proyecto-angular:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "my-deberCarlosPg",
+  "defaultProject": "proyecto-angular",
   "cli": {
-    "analytics": false
+    "analytics": "8315e4b2-7b34-44ca-aeb8-54ad0836a9c9"
   }
 }
