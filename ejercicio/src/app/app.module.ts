@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
+import { UsuarioModule } from './usuario/usuario.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
     FormsModule,  
     MatInputModule,
     AutoCompleteModule,
+    UsuarioModule
   ],
   providers: [],
   bootstrap: [AppComponent],
