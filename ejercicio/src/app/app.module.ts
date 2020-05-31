@@ -15,6 +15,9 @@ import { MatInputModule } from '@angular/material/input';
 
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { UsuarioModule } from './usuario/usuario.module';
+import {HttpClientModule} from "@angular/common/http";
+import { LoginService } from './services/login.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -33,9 +36,15 @@ import { UsuarioModule } from './usuario/usuario.module';
     FormsModule,  
     MatInputModule,
     AutoCompleteModule,
-    UsuarioModule
+    UsuarioModule,
+    CommonModule,
+  HttpClientModule
+    
+
   ],
-  providers: [],
+  providers: [
+    LoginService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

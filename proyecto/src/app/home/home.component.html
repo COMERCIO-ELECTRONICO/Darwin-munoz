@@ -1,13 +1,88 @@
-<mat-toolbar color="primary"
->
-<span>
-    LIBRERIA CADIW
-</span>
-<div class="spacer"></div>
-<a  mat-button [routerLink]="['/libro']">
+<mat-toolbar class="navar-color">
+  <a mat-button class="text-white" [routerLink]="[('/login')]">
+    <h3>
+      LIBRERIA CADIW
+    </h3>
+
+  </a>
+
+
+  <div class="spacer"></div>
+  <a mat-button (click)="libro()" class="text-white">
     VER LISTA DE LIBROS
-</a>
-<a  mat-button [routerLink]="['/alquilados']">
-    VER LISTA DE LIBROS ALQUILADOS
-</a >
+  </a>
+
+  <a mat-button class="text-white" (click)="alqilados()">
+    VER LISTA DE LIBROS ALQUILADO
+  </a>
+  <div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <a mat-button id="dropdownForm1" ngbDropdownToggle><img src=".\assets\img\user-icon-32.png" alt=""></a>
+        <div ngbDropdownMenu aria-labelledby="dropdownForm1">
+          <form class="px-4 py-3">
+            <div class="form-group">
+              <label>Registrado como</label>
+              <input type="text" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+              <label>Perfil</label>
+              <button ngbDropdownItem>TU Perfil</button>
+            </div>
+            <button class="btn btn-primary" [routerLink]="['/login']">Cerrar sesion</button>
+          </form>
+        
+        </div>
+      </div>
+    </div>
+  </div>
 </mat-toolbar>
+
+<div class="container-style"*ngIf="carrusel">
+  <div class="row  b-block justify-content-center">
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[0]" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[1]" alt="Random second slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[2]" alt="Random third slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  
+</div>
+
+
+<div class="container my-5 b-block justify-content-center" *ngIf="libros">
+
+  <app-libro>
+
+  </app-libro>
+</div>
+
+<div class="container  my-5 b-block justify-content-center" *ngIf="alquilados">
+  <app-libro-alquilado>
+
+  </app-libro-alquilado>
+</div>
