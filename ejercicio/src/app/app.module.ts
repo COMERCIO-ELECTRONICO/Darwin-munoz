@@ -1,4 +1,3 @@
-import { AutoCompleteModule } from 'primeng/autocomplete';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,12 +11,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-
+import {AutoCompleteModule} from 'primeng/autocomplete';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { UsuarioModule } from './usuario/usuario.module';
+import { CommonModule } from '@angular/common';
 import {HttpClientModule} from "@angular/common/http";
 import { LoginService } from './services/login.service';
-import { CommonModule } from '@angular/common';
+import { LoginGuard } from './guards/login.guard';
 
 @NgModule({
   declarations: [
@@ -33,17 +33,16 @@ import { CommonModule } from '@angular/common';
     AppRoutes,
     BrowserAnimationsModule,
     ButtonModule,
-    FormsModule,  
     MatInputModule,
+    FormsModule,
     AutoCompleteModule,
     UsuarioModule,
     CommonModule,
-  HttpClientModule
-    
-
+    HttpClientModule
   ],
   providers: [
-    LoginService
+    LoginService,
+    LoginGuard
   ],
   bootstrap: [AppComponent],
 })
